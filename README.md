@@ -1,15 +1,15 @@
-# Plugin RDP per Codex
+# Codex RDP Plugin for Windows
 
-**Desktop remoto RDP** è un plugin di **kad26** per Codex e ChatGPT Desktop su Windows. Apre in background una sessione Desktop remoto e permette alla chat di vedere lo schermo, fare click e digitare sul server.
+**Desktop remoto RDP** is a plugin by **kad26** for Codex and ChatGPT Desktop. It connects to a Windows Remote Desktop (RDP) session in the background so the chat can request screenshots and send mouse or keyboard input to that session.
 
-## Installazione
+## Download and install
 
-1. Scarica `Desktop-Remoto-RDP-v0.1.0-kad26.zip` dalla [sezione Release](https://github.com/Kad26/codex-rdp-plugin/releases). Lo ZIP include il codice e gli script.
-2. Estrai lo ZIP in una cartella stabile ed esegui `./Installa.ps1` e `./Configura.ps1` da PowerShell.
-3. In una nuova chat locale, seleziona **Desktop remoto RDP** e chiedi di mostrarti uno screenshot del server configurato.
+1. Download `Desktop-Remoto-RDP-v0.1.0-kad26.zip` from [Releases](https://github.com/Kad26/codex-rdp-plugin/releases). The ZIP includes the plugin source, setup scripts, and instructions in English and Italian.
+2. Extract the ZIP to a permanent folder. Run `.\Installa.ps1` and then `.\Configura.ps1` from PowerShell.
+3. In a new local chat, select **Desktop remoto RDP** and ask it to connect and show a screenshot.
 
-## Requisiti e permessi
+## Requirements
 
-L’anteprima richiede Windows x64, il comando `codex`, Python 3.13 x64 e un server raggiungibile via RDP diretto con NLA e NTLM. Durante la configurazione inserisci il certificato pubblico verificato del server o la sua impronta SHA-256 e un account dedicato.
+The preview requires Windows x64, the Codex CLI, Python 3.13 x64, and a Windows server reachable over direct RDP with NLA and NTLM. Configure a dedicated RDP account and provide the server’s verified public TLS certificate or SHA-256 fingerprint.
 
-La password si digita in locale e il profilo è protetto da Windows DPAPI. Gli input usano i diritti dell’account RDP. Gli screenshot richiesti sono visibili nella chat. Per istruzioni e limiti dettagliati, consulta il README incluso nello ZIP.
+Enter the password in the local setup prompt. Windows DPAPI protects the saved profile. Screenshots requested by the plugin are sent to the chat, and remote input runs with the permissions of the configured RDP account.
