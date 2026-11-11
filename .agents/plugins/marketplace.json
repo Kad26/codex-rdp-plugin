@@ -1,0 +1,12 @@
+{
+  "name": "desktop-remoto-locale",
+  "interface": { "displayName": "Desktop remoto locale" },
+  "plugins": [
+    {
+      "name": "desktop-remoto",
+      "source": { "source": "local", "path": "./plugins/desktop-remoto" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+      "category": "Productivity"
+    }
+  ]
+}

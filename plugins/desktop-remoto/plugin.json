@@ -1,0 +1,27 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "desktop-remoto",
+  "version": "0.1.0",
+  "description": "View and control an authorized Windows Remote Desktop session from Codex.",
+  "extensions": {
+    "com.openai": {
+      "requires_local_executor": true,
+      "interface": {
+        "displayName": "Desktop remoto RDP",
+        "shortDescription": "View and control your remote Windows desktop over RDP.",
+        "category": "Productivity",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "defaultPrompt": [
+          "Use Desktop remoto RDP to show me the configured remote desktop."
+        ],
+        "developerName": "kad26"
+      }
+    }
+  },
+  "author": {
+    "name": "kad26"
+  }
+}
